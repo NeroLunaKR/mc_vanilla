@@ -1,6 +1,13 @@
 {
   "namespace": "promo_timeline",
 
+  "rotation_arrows": {
+    "type": "image",
+    "layer": 6,
+    "texture": "textures/ui/Rotate",
+    "color": [ 0.6, 0.6, 0.6 ]
+  },
+
   "promo_banner_factory": {
     "type": "stack_panel",
     "orientation": "vertical",
@@ -3656,7 +3663,6 @@
                             "size": [ "100%", "100%" ],
                             "renderer": "paper_doll_renderer",
                             "use_selected_skin": false,
-                            "use_skin_gui_scale": true,
                             "enable_scissor_test": true,
                             "bindings": [
                               {
@@ -3916,7 +3922,6 @@
                 "starting_rotation": 30,
                 "layer": 4,
                 "use_selected_skin": false,
-                "use_skin_gui_scale": true,
                 "rotation": "gesture_x",
                 "bindings": [
                   {
@@ -3951,7 +3956,7 @@
                 "anchor_to": "bottom_middle",
                 "controls": [
                   {
-                    "rotate_arrows@skin_picker.skin_rotation_arrows": {
+                    "rotate_arrows@promo_timeline.rotation_arrows": {
                       "size": [ 37, 7 ],
                       "anchor_from": "center",
                       "anchor_to": "center"

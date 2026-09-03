@@ -847,6 +847,10 @@
       {
         "popup_dialog_factory": {
           "type": "factory",
+          "$section_name": "rows",
+          "property_bag_for_children": {
+            "#section_name": "$section_name"
+          },
           "control_ids": {
             "no_store_connection": "@common_store.popup_dialog__no_store_connection",
             "restore_popup": "@common_store.popup_dialog__restore_popup",
@@ -859,7 +863,8 @@
             "$store_factory_binding_type",
             "$store_factory_collection_prefix",
             "$store_factory_collection_name",
-            "$store_header_size"
+            "$store_header_size",
+            "$section_name"
           ]
         }
       },
@@ -946,6 +951,7 @@
   },
 
   "skin_selector_screen@store_layout.sdl_base_screen": {
+    "$is_skin_selector": true,
     "$ignore_info_text_box_description": true,
     "$sdl_screen_content": "store_layout.character_creator_screen_layout",
     "$requires_restore_button": false,
@@ -962,6 +968,11 @@
         "binding_condition": "always"
       }
     ]
+  },
+
+  "edu_skin_picker_screen@store_layout.skin_selector_screen": {
+    "$hide_failure_text": true,
+    "$ignore_search": true
   },
 
   "store_data_driven_modal_one_button_screen@store_layout.store_data_driven_screen_base": {
